@@ -26,7 +26,7 @@
 <div id="md" style="display: none;">
 <!-- markdown -->
 下面的代码尝试了对一个类分别传list、int、其他类三种参数，然后改变原始参数，观察类参数的值是否一起发生变化。
-~~~~{python}
+
 class A(object):
     def __init__(self, list):
         self.test = list
@@ -53,7 +53,6 @@ c = A(x)
 print c.test.a
 x.a = 4
 print c.test.a
-~~~~
 
 结论是list和其他类的改变会令类参数一起改变，而int不会。
 Python中没有指针，所以向类传递参数到底传的是地址还是值应该和传递的类型有关，我认为应该是类似向函数传递参数时的可变参数和不可变参数。
